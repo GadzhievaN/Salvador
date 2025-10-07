@@ -1,67 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Мета-информация и базовые настройки -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salvador - Детейлинг автомойка</title>
+    
+    <!-- Подключение стилей -->
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Подключаем тонкие элегантные шрифты -->
+    
+    <!-- Подключение шрифтов -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-        <!-- Шапка сайта -->
-        <header class="main-header">
-            <div class="container">
-                <div class="row align-items-center">
-                    <!-- Логотип и название -->
-                    <div class="col-md-6">
-                        <div class="logo-section">
-                            <h1 class="site-title">SALVADOR</h1>
-                            <p class="site-subtitle">АВТОМОЙКА <span class="divider">|</span>ДЕТЕЙЛИНГ</p>
-                        </div>
-                    </div>
-                    <!-- Контакты и график -->
-                    <div class="col-md-6">
-                        <div class="contacts-section">
-                            <div class="phone-item">
-                                <i class="fas fa-phone"></i>
-                                <a href="tel:89774455225">8 (977) 445-52-25</a>
-                            </div>
-                            <div class="phone-item">
-                                <i class="fas fa-phone"></i>
-                                <a href="tel:84998400500">8 (499) 840-05-00</a>
-                            </div>
-                            <div class="schedule">
-                                <i class="far fa-clock"></i>
-                                <span>08:00-22:00 без выходных</span>
-                            </div>
-                        </div>
-                    </div>
+
+<!-- ===== HEADER SECTION ===== -->
+<header class="main-header">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Логотип и название -->
+            <div class="col-md-6">
+                <div class="logo-section">
+                    <h1 class="site-title">SALVADOR</h1>
+                    <p class="site-subtitle">АВТОМОЙКА <span class="divider">|</span>ДЕТЕЙЛИНГ</p>
                 </div>
             </div>
-        </header>
+            
+            <!-- Кнопка личного кабинета -->
+            <div class="col-md-6">
+                <div class="personal-cabinet-btn">
+                    <button onclick="handlePersonalCabinetClick()">👤 Личный кабинет</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
-<!-- Герой-секция -->
+<!-- ===== HERO SECTION ===== -->
 <section class="hero">
     <div class="container">
         <div class="hero-content">
             <h1 class="hero-title">Профессиональный детейлинг для вашего автомобиля</h1>
-            <p class="hero-subtitle">Вернем идеальный вид и защитим кузов надолго. Полный комплекс услуг от мойки до бронирования</p>
-            <button class="hero-button">Записаться онлайн</button>
+            <p class="hero-subtitle">Вернем идеальный вид и защитим кузов надолго</p>
+            <button class="hero-button" onclick="openBookingModal()">Записаться онлайн</button>
         </div>
     </div>
 </section>
 
-<!-- Блок услуг и цен -->
+<!-- ===== SERVICES SECTION ===== -->
 <section class="services">
     <div class="container">
         <h2 class="services-title">Наши услуги</h2>
         <p class="services-subtitle">Профессиональный уход для вашего автомобиля</p>
         
         <div class="services-grid">
-            <!-- Карточка 1 -->
+            
+            <!-- Карточка услуги 1 -->
             <div class="service-card">
                 <div class="card-icon">🚗</div>
                 <h3 class="card-title">Экспресс-мойка кузова</h3>
@@ -73,10 +69,9 @@
                     <div class="price-item">4 класс: <span>950 ₽</span></div>
                     <div class="price-item">5 класс: <span>1050 ₽</span></div>
                 </div>
-                <button class="card-button">Записаться</button>
             </div>
 
-            <!-- Карточка 2 -->
+            <!-- Карточка услуги 2 -->
             <div class="service-card">
                 <div class="card-icon">✨</div>
                 <h3 class="card-title">Двухфазная мойка кузова</h3>
@@ -88,10 +83,9 @@
                     <div class="price-item">4 класс: <span>1400 ₽</span></div>
                     <div class="price-item">5 класс: <span>1500 ₽</span></div>
                 </div>
-                <button class="card-button">Записаться</button>
             </div>
 
-            <!-- Карточка 3 -->
+            <!-- Карточка услуги 3 -->
             <div class="service-card">
                 <div class="card-icon">🛡️</div>
                 <h3 class="card-title">Трехфазная мойка кузова</h3>
@@ -103,10 +97,9 @@
                     <div class="price-item">4 класс: <span>1750 ₽</span></div>
                     <div class="price-item">5 класс: <span>1900 ₽</span></div>
                 </div>
-                <button class="card-button">Записаться</button>
             </div>
 
-            <!-- Карточка 4 -->
+            <!-- Карточка услуги 4 -->
             <div class="service-card">
                 <div class="card-icon">🧽</div>
                 <h3 class="card-title">Двухфазный комплекс</h3>
@@ -118,10 +111,9 @@
                     <div class="price-item">4 класс: <span>2250 ₽</span></div>
                     <div class="price-item">5 класс: <span>2450 ₽</span></div>
                 </div>
-                <button class="card-button">Записаться</button>
             </div>
 
-            <!-- Карточка 5 -->
+            <!-- Карточка услуги 5 -->
             <div class="service-card">
                 <div class="card-icon">⚡</div>
                 <h3 class="card-title">Трехфазный комплекс</h3>
@@ -133,10 +125,9 @@
                     <div class="price-item">4 класс: <span>2600 ₽</span></div>
                     <div class="price-item">5 класс: <span>2850 ₽</span></div>
                 </div>
-                <button class="card-button">Записаться</button>
             </div>
 
-            <!-- Карточка 6 - Кислотный комплекс -->
+            <!-- Карточка услуги 6 -->
             <div class="service-card">
                 <div class="card-icon">🧪</div>
                 <h3 class="card-title">Кислотный комплекс</h3>
@@ -148,13 +139,13 @@
                     <div class="price-item">4 класс: <span>2700 ₽</span></div>
                     <div class="price-item">5 класс: <span>2950 ₽</span></div>
                 </div>
-                <button class="card-button">Записаться</button>
-            </div> 
+            </div>
+            
         </div>
     </div>
 </section>
 
-<!-- Карусель с фото работ -->
+<!-- ===== GALLERY SECTION ===== -->
 <section class="gallery">
     <div class="container">
         <h2 class="gallery-title">Наша галерея</h2>
@@ -163,25 +154,25 @@
             <div class="carousel-track">
                 <!-- Слайд 1 -->
                 <div class="carousel-slide">
-                    <img src="images/photo1.jpg">
+                    <img src="images/photo1.jpg" alt="Пример работ детейлинга 1">
                 </div>
                 
                 <!-- Слайд 2 -->
                 <div class="carousel-slide">
-                    <img src="images/photo2.jpg">
+                    <img src="images/photo2.jpg" alt="Пример работ детейлинга 2">
                 </div>
                 
                 <!-- Слайд 3 -->
                 <div class="carousel-slide">
-                    <img src="images/photo3.jpg">
+                    <img src="images/photo3.jpg" alt="Пример работ детейлинга 3">
                 </div>
             </div>
             
-            <!-- Кнопки навигации -->
+            <!-- Навигация карусели -->
             <button class="carousel-btn carousel-btn-prev">‹</button>
             <button class="carousel-btn carousel-btn-next">›</button>
             
-            <!-- Индикаторы -->
+            <!-- Индикаторы карусели -->
             <div class="carousel-indicators">
                 <span class="indicator active"></span>
                 <span class="indicator"></span>
@@ -191,20 +182,20 @@
     </div>
 </section>
 
-<!-- Блок с контактами -->
+<!-- ===== CONTACTS SECTION ===== -->
 <section class="contacts-section-full">
     <div class="container">
         <h2 class="contacts-title">Контакты</h2>
         
         <div class="contacts-grid">
-            <!-- Адрес -->
+            <!-- Блок адреса -->
             <div class="contact-card">
                 <div class="contact-icon">📍</div>
                 <h3 class="contact-card-title">Адрес</h3>
                 <p class="contact-card-text">г. Москва, ул. Сервантеса, д. 6</p>
             </div>
             
-            <!-- Телефоны -->
+            <!-- Блок телефонов -->
             <div class="contact-card">
                 <div class="contact-icon">📞</div>
                 <h3 class="contact-card-title">Телефоны</h3>
@@ -216,7 +207,7 @@
                 </p>
             </div>
             
-            <!-- График работы -->
+            <!-- Блок графика работы -->
             <div class="contact-card">
                 <div class="contact-icon">🕒</div>
                 <h3 class="contact-card-title">График работы</h3>
@@ -227,7 +218,103 @@
         </div>
     </div>
 </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+<!-- ===== MODAL WINDOWS ===== -->
+
+<!-- Модальное окно онлайн-записи -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeBookingModal()">&times;</span>
+        <h2>Онлайн-запись</h2>
+        
+        <div class="booking-steps">
+            <!-- Шаг 1: Выбор услуги -->
+            <div class="step active" id="step1">
+                <h3>Выберите услугу</h3>
+                <div class="service-select">
+                    <div class="service-option" onclick="selectService('Экспресс-мойка кузова', 650)">
+                        <span>Экспресс-мойка кузова</span>
+                        <span>от 650 ₽</span>
+                    </div>
+                    <div class="service-option" onclick="selectService('Двухфазная мойка кузова', 1000)">
+                        <span>Двухфазная мойка кузова</span>
+                        <span>от 1000 ₽</span>
+                    </div>
+                    <div class="service-option" onclick="selectService('Двухфазная мойка кузова', 1000)">
+                        <span>Трёхфазная мойка кузова</span>
+                        <span>от 1200 ₽</span>
+                    </div>
+                    <div class="service-option" onclick="selectService('Двухфазная мойка кузова', 1000)">
+                        <span>Двухфазный комплекс</span>
+                        <span>от 1650 ₽</span>
+                    </div>
+                    <div class="service-option" onclick="selectService('Двухфазная мойка кузова', 1000)">
+                        <span>Трёхфазный комплекс</span>
+                        <span>от 1850 ₽</span>
+                    </div>
+                    <div class="service-option" onclick="selectService('Двухфазная мойка кузова', 1000)">
+                        <span>Кислотный комплекс</span>
+                        <span>от 1950 ₽</span>
+                    </div>
+                    <!-- Остальные услуги добавляются по аналогии -->
+                </div>
+                <button class="next-btn" onclick="nextStep()">Далее</button>
+            </div>
+            
+            <!-- Шаг 2: Выбор даты и времени -->
+            <div class="step" id="step2">
+                <h3>Выберите дату и время</h3>
+                <div class="calendar" id="bookingCalendar">
+                    <!-- Календарь загружается через JavaScript -->
+                </div>
+                <div class="step-buttons">
+                    <button class="prev-btn" onclick="prevStep()">Назад</button>
+                    <button class="next-btn" onclick="nextStep()">Далее</button>
+                </div>
+            </div>
+            
+            <!-- Шаг 3: Контактные данные -->
+            <div class="step" id="step3">
+                <h3>Ваши данные</h3>
+                <input type="text" placeholder="Ваше имя" id="clientName">
+                <input type="tel" placeholder="Телефон" id="clientPhone">
+                <div class="step-buttons">
+                    <button class="prev-btn" onclick="prevStep()">Назад</button>
+                    <button class="confirm-btn" onclick="confirmBooking()">Подтвердить запись</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно авторизации -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <h2>Вход в личный кабинет</h2>
+        
+        <!-- Форма авторизации -->
+        <div class="auth-form">
+            <input type="email" placeholder="Email" id="loginEmail">
+            <input type="password" placeholder="Пароль" id="loginPassword">
+            <button onclick="login()">Войти</button>
+            <p>Нет аккаунта? <a href="#" onclick="showRegister()">Зарегистрироваться</a></p>
+        </div>
+        
+        <!-- Форма регистрации -->
+        <div class="register-form" style="display: none;">
+            <input type="text" placeholder="Имя" id="registerName">
+            <input type="email" placeholder="Email" id="registerEmail">
+            <input type="password" placeholder="Пароль" id="registerPassword">
+            <button onclick="register()">Зарегистрироваться</button>
+            <p>Уже есть аккаунт? <a href="#" onclick="showLogin()">Войти</a></p>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
