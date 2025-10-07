@@ -1,10 +1,13 @@
-/* Базовые стили */
+/* ===== GLOBAL STYLES ===== */
+
+/* Reset и базовые настройки */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Основные стили body */
 body {
     font-family: 'Roboto Condensed', sans-serif;
     background-color: #1a1a1a;
@@ -12,21 +15,22 @@ body {
     line-height: 1.6;
 }
 
-/* Шапка сайта */
-.main-header {
-    background-color: #000000;
-    padding: 30px 0;
-    border-bottom: 3px solid #ffd700;
-}
-
-/* Контейнер для выравнивания */
+/* Контейнер для центрирования контента */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
 }
 
-/* Стили для логотипа и названия */
+/* ===== HEADER STYLES ===== */
+
+.main-header {
+    background-color: #000000;
+    padding: 30px 0;
+    border-bottom: 3px solid #ffd700;
+}
+
+/* Стили логотипа и названия */
 .logo-section {
     display: flex;
     flex-direction: column;
@@ -66,59 +70,36 @@ body {
     font-weight: 300;
 }
 
-/* Стили для контактов и графика */
-.contacts-section {
-    text-align: right;
-}
-
-.phone-item {
-    margin-bottom: 8px;
+/* Кнопка личного кабинета */
+.personal-cabinet-btn {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
-    gap: 10px;
-}
-
-.phone-item i {
-    color: #ffd700;
-    font-size: 1.1rem;
-}
-
-.phone-item a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 300;
-    transition: color 0.3s ease;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.phone-item a:hover {
-    color: #ffd700;
-    text-decoration: none;
-}
-
-.schedule {
-    display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 5px;
+    height: 100%;
 }
 
-.schedule i {
-    color: #ffd700;
-    font-size: 1rem;
-}
-
-.schedule span {
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 300;
+.personal-cabinet-btn button {
+    background: #ffd700;
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
     font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
 }
 
-/* Герой-секция */
+.personal-cabinet-btn button:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+/* ===== HERO SECTION STYLES ===== */
+
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
                 url('главное.jpg');
@@ -178,7 +159,8 @@ body {
     box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
 }
 
-/* Блок услуг и цен */
+/* ===== SERVICES SECTION STYLES ===== */
+
 .services {
     padding: 80px 0;
     background-color: #000000;
@@ -212,6 +194,7 @@ body {
     margin: 0 auto;
 }
 
+/* Карточки услуг */
 .service-card {
     background: #2a2a2a;
     border-radius: 10px;
@@ -253,7 +236,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.3;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); /* Добавим тень для контраста */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .card-description {
@@ -264,7 +247,7 @@ body {
     line-height: 1.4;
     font-weight: 300;
     min-height: 60px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); /* Тень для читаемости */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .price-list {
@@ -310,7 +293,8 @@ body {
     transform: translateY(-2px);
 }
 
-/* Карусель с фото работ */
+/* ===== GALLERY SECTION STYLES ===== */
+
 .gallery {
     padding: 80px 0;
     background-color: #000000;
@@ -327,15 +311,7 @@ body {
     letter-spacing: 2px;
 }
 
-.gallery-subtitle {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.1rem;
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 50px;
-    font-weight: 300;
-}
-
+/* Карусель */
 .carousel {
     position: relative;
     max-width: 900px;
@@ -360,20 +336,6 @@ body {
     height: 500px;
     object-fit: cover;
     display: block;
-}
-
-.slide-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 300;
 }
 
 .carousel-btn {
@@ -429,7 +391,8 @@ body {
     transform: scale(1.2);
 }
 
-/* Блок с контактами */
+/* ===== CONTACTS SECTION STYLES ===== */
+
 .contacts-section-full {
     padding: 80px 0;
     background-color: #000000;
@@ -444,15 +407,6 @@ body {
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
-}
-
-.contacts-subtitle {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.1rem;
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 50px;
-    font-weight: 300;
 }
 
 .contacts-grid {
@@ -531,39 +485,486 @@ body {
     margin-top: 10px;
 }
 
-.contacts-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+/* ===== MODAL WINDOWS STYLES ===== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
 }
 
-.info-block {
-    background: #1a1a1a;
-    padding: 25px;
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 5% auto;
+    padding: 30px;
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    color: #ffd700;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ffffff;
+}
+
+/* Стили для шагов записи */
+.booking-steps .step {
+    display: none;
+}
+
+.booking-steps .step.active {
+    display: block;
+}
+
+.service-option {
+    background: #2a2a2a;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    color: #ffffff !important;
+}
+
+.service-option span {
+    color: #ffffff !important;
+}
+
+.service-option:hover {
+    border-color: #ffd700;
+    transform: translateY(-2px);
+    color: #000000 !important;
+}
+
+.service-option:hover span {
+    color: #000000 !important;
+}
+
+/* Кнопки модальных окон */
+.next-btn, .prev-btn, .confirm-btn {
+    background: #ffd700 !important;
+    color: #000000 !important;
+    border: none;
+    padding: 12px 30px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.next-btn:hover, .prev-btn:hover, .confirm-btn:hover {
+    background: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+.prev-btn {
+    background: #666 !important;
+    color: #ffffff !important;
+}
+
+.confirm-btn {
+    background: #ffd700 !important;
+    color: #000000 !important;
+}
+
+/* Календарь записи */
+.time-grid {
+    display: grid;
+    grid-template-columns: 100px repeat(7, 1fr);
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.time-header {
+    font-family: 'Oswald', sans-serif;
+    color: #ffd700;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.time-slot {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #ffd700 !important;
+    text-align: center;
+    padding: 8px 2px;
+    font-size: 0.8rem;
+    border-bottom: 1px solid #333;
+    font-weight: 600;
+}
+
+.day-header {
+    font-family: 'Oswald', sans-serif;
+    color: #ffd700 !important;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ffd700;
+    font-weight: 600;
+}
+
+.slot {
+    text-align: center;
+    padding: 10px 2px;
+    margin: 1px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.8rem;
+}
+
+.slot.available {
+    background: #2a2a2a;
+    color: #ffd700;
+    border: 1px solid #ffd700;
+}
+
+.slot.available:hover {
+    background: #ffd700;
+    color: #000000;
+}
+
+.slot.booked {
+    background: #2a2a2a;
+    color: #ff4444;
+    border: 1px solid #ff4444;
+    cursor: not-allowed;
+}
+
+.slot.selected {
+    background: #ffd700;
+    color: #000000;
+    border: 1px solid #ffd700;
+}
+
+/* Формы авторизации */
+.auth-form input, .register-form input, .step input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.auth-form button, .register-form button {
+    background: #ffd700;
+    color: #000000;
+    border: none;
+    padding: 12px 30px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.auth-form a, .register-form a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.service-option.selected {
+    background: #ffd700 !important;
+    border-color: #ffd700 !important;
+    color: #000000 !important;
+}
+
+.service-option.selected span {
+    color: #000000 !important;
+    font-weight: 600;
+}
+
+/* Улучшенные стили для опций услуг */
+.service-option {
+    background: #2a2a2a;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    color: #ffffff !important;
+}
+
+.service-option span {
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+.service-option:hover {
+    border-color: #ffd700;
+    transform: translateY(-2px);
+}
+
+.service-option:hover span {
+    color: #ffffff !important;
+}
+
+/* ===== PERSONAL CABINET STYLES ===== */
+
+.personal-body {
+    background: #000000;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Фон для личного кабинета с изображением и затемнением */
+.personal-body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.85), 
+            rgba(0, 0, 0, 0.9)
+        ),
+        url('главное.jpg') center/cover no-repeat;
+    z-index: -1;
+}
+
+.personal-container {
+    display: flex;
+    min-height: calc(100vh - 100px);
+    position: relative;
+    z-index: 1;
+}
+
+.personal-sidebar {
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.user-info h3 {
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 5px;
+}
+
+.user-info p {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-item:hover, .nav-item.active {
+    background: #ffd700;
+    color: #000000;
+}
+
+.personal-content {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(5px)
+}
+
+.tab-content {
+    background: rgba(42, 42, 42, 0.9);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.profile-form input {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 10px 0;
+    background: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.profile-form button {
+    background: #ffd700;
+    color: #000000;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+}
+
+.bookings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-item {
+    background: #2a2a2a;
+    padding: 20px;
     border-radius: 8px;
     border-left: 3px solid #ffd700;
 }
 
-.info-block h4 {
+/* ===== PERSONAL CABINET FIXES ===== */
+
+.personal-content {
+    flex: 1;
+    padding: 40px;
+    background: rgba(26, 26, 26, 0.3);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-content {
+    display: none;
+    flex: 1;
+}
+
+.tab-content.active {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.tab-content-inner {
+    max-width: 600px;
+    width: 100%;
+    background: rgba(42, 42, 42, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.tab-content-inner h2 {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: #ffffff;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.info-block p {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 0.95rem;
-    color: #ffffff;
-    line-height: 1.5;
-    font-weight: 300;
+/* Улучшенные стили для списка записей */
+.bookings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* Адаптивность для мобильных */
+.booking-item {
+    background: #2a2a2a;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #ffd700;
+    transition: all 0.3s ease;
+}
+
+.booking-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.1);
+}
+
+.booking-item strong {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    color: #ffd700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.booking-item p {
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Стили для секции онлайн-записи в ЛК */
+.booking-section {
+    text-align: center;
+}
+
+.booking-info {
+    margin-top: 20px;
+    padding: 20px;
+    background: #2a2a2a;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.booking-info p {
+    color: #cccccc;
+    font-style: italic;
+}
+
+/* Исправляем цвет текста на белый */
+.bookings-list p {
+    color: #ffffff !important; /* Делаем белым текст "У вас пока нет записей" */
+}
+
+.booking-info p {
+    color: #ffffff !important; /* Белый текст в секции онлайн-записи */
+}
+
+.tab-content-inner p {
+    color: #ffffff !important; /* Белый текст во всех вкладках */
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+
 @media (max-width: 768px) {
     .container {
         padding: 0 20px;
@@ -590,21 +991,9 @@ body {
         padding-left: 0;
     }
     
-    .contacts-section {
-        text-align: center;
+    .personal-cabinet-btn {
+        justify-content: center;
         margin-top: 20px;
-    }
-    
-    .phone-item {
-        justify-content: center;
-    }
-    
-    .phone-item a {
-        font-size: 1.1rem;
-    }
-    
-    .schedule {
-        justify-content: center;
     }
 
     .hero {
@@ -632,11 +1021,6 @@ body {
     
     .services-title {
         font-size: 2rem;
-    }
-    
-    .services-subtitle {
-        font-size: 1rem;
-        margin-bottom: 40px;
     }
     
     .services-grid {
@@ -670,11 +1054,6 @@ body {
         font-size: 2rem;
     }
     
-    .gallery-subtitle {
-        font-size: 1rem;
-        margin-bottom: 40px;
-    }
-    
     .carousel {
         margin: 0 20px;
     }
@@ -688,11 +1067,6 @@ body {
         height: 40px;
         font-size: 1.5rem;
     }
-    
-    .slide-caption {
-        font-size: 1rem;
-        padding: 15px;
-    }
 
     .contacts-section-full {
         padding: 60px 0;
@@ -700,11 +1074,6 @@ body {
     
     .contacts-title {
         font-size: 2rem;
-    }
-    
-    .contacts-subtitle {
-        font-size: 1rem;
-        margin-bottom: 40px;
     }
     
     .contacts-grid {
@@ -718,19 +1087,18 @@ body {
         padding: 25px 20px;
     }
     
-    .contacts-info {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 0 20px;
+    .personal-container {
+        flex-direction: column;
     }
     
-    .info-block {
+    .personal-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #ffd700;
+    }
+    
+    .personal-content {
         padding: 20px;
     }
 }
 
-/* Основной контент */
-main {
-    padding: 50px 0;
-    text-align: center;
-}
